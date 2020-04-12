@@ -5,6 +5,7 @@ After=network.target remote-fs.target
 [Service]
 Type=simple
 User=kafka
+Environment="KAFKA_OPTS=-Djava.security.auth.login.config=/home/kafka/conf/sasl/zookeeper_jaas.conf"
 ExecStart=/home/kafka/kafka/bin/zookeeper-server-start.sh /home/kafka/kafka/config/zookeeper.properties
 ExecStop=/home/kafka/kafka/bin/zookeeper-server-stop.sh
 Restart=on-abnormal
