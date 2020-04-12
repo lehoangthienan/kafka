@@ -1,0 +1,7 @@
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+    volumes:
+      - /data/zookeeper:/opt/zookeeper*

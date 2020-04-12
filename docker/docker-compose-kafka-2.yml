@@ -1,0 +1,12 @@
+services:
+  kafka-2:
+    image: wurstmeister/kafka
+    ports:
+      - "9093:9092"
+    environment:
+      HOSTNAME_COMMAND: "echo $$(hostname)"
+      KAFKA_ADVERTISED_HOST_NAME: YOUR_PUBLIC_IP
+      KAFKA_ZOOKEEPER_CONNECT: 172.17.0.1:2181
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /data/kafka-2:/kafka
