@@ -8,6 +8,16 @@ sudo adduser kafka sudo
 
 su -l kafka
 
+apt-get update -y
+
+# install java
+
+add-apt-repository ppa:webupd8team/java
+
+apt-get install oracle-java8-installer -y
+
+java -version
+
 # install kafka
 
 curl "https://www.apache.org/dist/kafka/2.1.1/kafka_2.11-2.1.1.tgz" -o ~/Downloads/kafka.tgz
@@ -19,6 +29,8 @@ tar -xvzf ~/Downloads/kafka.tgz --strip 1
 properties => nano ~/kafka/config/server.properties => config kafka
 
 sudo nano /etc/systemd/system/zookeeper.service
+
+/opt/Kafka/bin/kafka-server-start.sh /opt/Kafka/config/server.properties => config service of ubuntu for keep connection
 
 # install zookeeper
 
