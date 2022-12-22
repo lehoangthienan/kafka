@@ -20,7 +20,7 @@
     "express": "^4.16.3",
     "formidable": "^1.2.2",
     "joi": "^13.6.0",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "kafka-node": "^5.0.0",
     "moment": "^2.22.2",
     "morgan": "^1.9.0",
